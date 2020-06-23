@@ -6,6 +6,7 @@
 #wrapper {
   width: 800px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 #wrapper h1 {
@@ -15,4 +16,8 @@
 #wrapper h1 + span {
   font-style: italic;
   text-shadow: 2px 2px 20px #000;
+}
+
+footer {
+  margin: 15px 0;
 }
