@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body {
+  background-color: #2a2a2a;
+  color: #8a8a8a;
+}
+
 #wrapper {
   width: 800px;
   margin: 0 auto;
