@@ -9,20 +9,65 @@ body {
 }
 
 #wrapper {
-  width: 800px;
+  width: 900px;
   margin: 0 auto;
   padding: 0 15px;
 }
 
 #wrapper h1 {
-  margin: 18px 0 8px;
+  display: block;
+  width: 100%;
+  margin: 18px auto 8px;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  white-space: nowrap;
+  text-align: center;
+  animation: h-typing 1s steps(44);
 }
 
 #wrapper h1 + span {
   font-style: italic;
   text-shadow: 2px 2px 20px #000;
+  font-size: 180%;
+  text-align: center;
+  white-space: nowrap;
+  display: block;
+  position: relative;
+  width: 100%;
+  border-right: 0.15em solid orange;
+  overflow: hidden;
+  margin: 0 auto;
+  animation: typing 4s steps(44) 1s 1 normal both, blink-text-cursor 0.75s step-end infinite normal;
 }
 
 footer {
   margin: 15px 0;
+}
+
+@keyframes h-typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 5em;
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 28em;
+  }
+}
+
+@keyframes blink-text-cursor {
+  from,
+  to {
+    border-right-color: orange;
+  }
+  50% {
+    border-right-color: transparent;
+  }
 }
