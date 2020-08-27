@@ -1,73 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@100&display=swap");
+
+:root {
+  box-sizing: border-box;
+  font-size: calc(1vw + 0.6em);
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
+*,
+::after,
+::before {
+  box-sizing: inherit;
+}
+
 body {
-  background-color: #2a2a2a;
-  color: #8a8a8a;
+  background-color: #181520;
+  font-family: "Roboto", sans-serif;
 }
 
-#wrapper {
-  width: 900px;
-  margin: 0 auto;
-  padding: 0 15px;
+.wrapper {
+  padding: 2em 4em;
+  text-align: center;
+  animation: page-anim 0.5s ease-out;
 }
 
-#wrapper h1 {
-  display: block;
-  width: 100%;
+.background {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: radial-gradient(#181520, #fe3333, #fe33d1, #33b5fe);
+  opacity: 0.1;
+}
+
+h1 {
   margin: 18px auto 8px;
-  overflow: hidden;
-  border-right: 0.15em solid orange;
-  white-space: nowrap;
+  font-family: "Open Sans", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
   text-align: center;
-  animation: h-typing 1s steps(44);
+  color: #fff;
+  text-shadow: 0 0 1px #181520;
 }
 
-#wrapper h1 + span {
-  font-style: italic;
-  text-shadow: 2px 2px 20px #000;
-  font-size: 180%;
-  text-align: center;
-  white-space: nowrap;
-  display: block;
+h1 + span {
   position: relative;
-  width: 100%;
-  border-right: 0.15em solid orange;
-  overflow: hidden;
+  display: block;
   margin: 0 auto;
-  animation: typing 4s steps(44) 1s 1 normal both, blink-text-cursor 0.75s step-end infinite normal;
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 3px;
 }
 
-footer {
-  margin: 15px 0;
+img.pzh {
+  display: block;
+  width: 240px;
+  height: 162px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
 }
 
-@keyframes h-typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 5em;
-  }
+ul {
+  list-style-type: none;
+  margin-top: 1.5em;
+  text-align: center;
 }
 
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 28em;
-  }
+ul li {
+  display: inline-block;
 }
 
-@keyframes blink-text-cursor {
-  from,
-  to {
-    border-right-color: orange;
+ul li a {
+  padding: 6px 12px;
+  color: #dadedf;
+}
+
+ul li:hover a {
+  color: #000;
+}
+
+ul li a svg {
+  height: 25px;
+  fill: #dadedf;
+  opacity: 0.5;
+  transform: opacity 0.25s;
+}
+
+ul li a svg:hover {
+  opacity: 1;
+}
+
+@keyframes page-anim {
+  0% {
+    transform: scale(0);
   }
-  50% {
-    border-right-color: transparent;
+  100% {
+    transform: scale(1);
   }
 }
